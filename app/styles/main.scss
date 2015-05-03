@@ -34,7 +34,7 @@ html, body {
   background-size: cover;
   margin: 0 auto;
   
-  background-image: url(../../images/image01.jpg);
+  background-image: url(../images/image01.jpg);
   z-index:-1;
 }
 
@@ -47,8 +47,7 @@ html, body {
 
 .splash .headline-container {
     position:absolute;
-    bottom:50px;
-    height:150px;
+    bottom:100px;
     width: 100%;
     overflow:hidden;
 }
@@ -60,7 +59,7 @@ html, body {
 }
 
 .splash .container .row .headline-text {
-    font-size: 36px;
+    /*font-size: 3em;*/
     font-weight: 300;
     color: #fff;
     text-transform: uppercase;
@@ -68,13 +67,96 @@ html, body {
     letter-spacing: 15px;
 }
 
+.splash .container .row .headline-text span {
+    letter-spacing:0;
+}
+
+.splash .container .row .headline-text {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */
+}
+
+@media (min-width: 43.75em) {
+  .splash .container .row .headline-text {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .splash .container .row .headline-text {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height 
+    and something more appropriate for display headings */
+  }
+}
+
+
+.splash .container .row .headline-body {
+    /*font-size: 1.125em;*/
+    font-weight: 300;
+    color: #B5DFD5;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 8px;
+}
+
+.splash .container .row .headline-body {
+  font-size: 0.75em;
+  line-height:2.0em;  
+}
+
+@media (min-width: 43.75em) {
+  .splash .container .row .headline-body {
+    font-size: 1em;
+    line-height:2.0em;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .splash .container .row .headline-body {
+    font-size: 1.115em;
+    line-height:2.0em;
+  }
+}
+
+
 
 .splash .control-nav {
     position: absolute;
     width: 100%;
     height: 50px;
     bottom: 0;    
-    background-color: #26292e;
+    background-color: #2B2C2D;
+    line-height:50px;    
+}
+
+.splash .control-nav ul {
+    margin:0;
+    padding:0;
+}
+
+.splash .control-nav ul li {
+    display:block;
+    float:left;
+}
+
+.splash .control-nav a {
+    display:block;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+.splash .control-nav a:hover {
+    background-color:#333;
+}
+.splash .control-nav a img {
+    max-height:25px;
 }
 
 .overlay {
@@ -83,12 +165,13 @@ html, body {
     height: 100%;
     opacity: 0.7;
     z-index: 0;
-    background-color: #26292e;
+    background-color: #2B2C2D;
 }
 
 
 .page {
     position: relative;
-    background-color: #2f3238;
+    background-color: #2B2C2D;
     z-index: 99;
 }
+
