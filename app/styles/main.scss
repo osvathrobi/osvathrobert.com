@@ -19,6 +19,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 html, body {
     height: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 .background {
